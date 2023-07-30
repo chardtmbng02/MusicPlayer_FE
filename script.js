@@ -1,6 +1,6 @@
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
-let ctrlIcon = document.getElementById("ctrlIcon");
+let control_icon = document.getElementById("control_icon");
 
 song.onloadedmetadata = function () {
   progress.max = song.duration;
@@ -8,14 +8,14 @@ song.onloadedmetadata = function () {
 };
 
 function playPause() {
-  if (ctrlIcon.classList.contains("fa-pause")) {
+  if (control_icon.classList.contains("fa-pause")) {
     song.pause();
-    ctrlIcon.classList.remove("fa-pause");
-    ctrlIcon.classList.add("fa-play");
+    control_icon.classList.remove("fa-pause");
+    control_icon.classList.add("fa-play");
   } else {
     song.play();
-    ctrlIcon.classList.add("fa-pause");
-    ctrlIcon.classList.remove("fa-play");
+    control_icon.classList.add("fa-pause");
+    control_icon.classList.remove("fa-play");
   }
 }
 
@@ -28,6 +28,6 @@ if (song.play()) {
 progress.onchange = function () {
   song.play();
   song.currentTime = progress.value;
-  ctrlIcon.classList.add("fa-pause");
-  ctrlIcon.classList.remove("fa-play");
+  control_icon.classList.add("fa-pause");
+  control_icon.classList.remove("fa-play");
 };
