@@ -1,6 +1,23 @@
-let progress = document.getElementById("progress");
-let song = document.getElementById("song");
-let control_icon = document.getElementById("control_icon");
+const progress = document.getElementById("progress");
+const song = document.getElementById("song");
+const controlIcon = document.getElementById("control_icon");
+const coverImg = document.querySelector(".cover-img");
+
+const songs = [
+  {
+    title: "Babalik Sa'Yo",
+    artist: "Moira Dela Torre",
+    src: "./songs/moira_dela_torre_babalik_sayo.mp3",
+    thumbnail: "./media/thumbnail.png",
+  },
+
+  {
+    title: "A Million Dreams",
+    artist: "The Greatest Showman",
+    src: "./songs/a_million_dreams.mp3",
+    thumbnail: "./media/thumbnail.png",
+  },
+];
 
 song.onloadedmetadata = function () {
   progress.max = song.duration;
@@ -8,26 +25,28 @@ song.onloadedmetadata = function () {
 };
 
 function playPause() {
-  if (control_icon.classList.contains("fa-pause")) {
-    song.pause();
-    control_icon.classList.remove("fa-pause");
-    control_icon.classList.add("fa-play");
-  } else {
+  if (song.paused) {
     song.play();
-    control_icon.classList.add("fa-pause");
-    control_icon.classList.remove("fa-play");
+    coverImg.classList.add("playing");
+    controlIcon.classList.remove("fa-play");
+    controlIcon.classList.add("fa-pause");
+  } else {
+    song.pause();
+    coverImg.classList.remove("playing");
+    controlIcon.classList.add("fa-play");
+    controlIcon.classList.remove("fa-pause");
   }
 }
 
-if (song.play()) {
-  setInterval(() => {
-    progress.value = song.currentTime;
-  }, 500);
+function updateProgress() {
+  progress.value = song.currentTime;
 }
 
-progress.onchange = function () {
-  song.play();
+setInterval(updateProgress, 500);
+
+progress.oninput = function () {
   song.currentTime = progress.value;
-  control_icon.classList.add("fa-pause");
-  control_icon.classList.remove("fa-play");
+  if (song.paused) {
+    playPause();
+  }
 };

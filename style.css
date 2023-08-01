@@ -97,8 +97,27 @@ nav .circle {
   cursor: pointer;
 }
 
+
 .controls div:nth-child(2){
-  transform: scale(1.5);
+  transform: scale(1.4);
+  background: #fff;
+  color: #494949;
+}
+.controls div:nth-child(2):hover{
   background: #494949;
   color: #fff;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cover-img.playing {
+  animation: spin 30s linear infinite;
 }
