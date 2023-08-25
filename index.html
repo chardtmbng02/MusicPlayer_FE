@@ -13,44 +13,48 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
-    <div class="container">
-      <div class="mplayer">
-        <nav>
-          <div class="circle">
-            <i class="fa-solid fa-angle-left"></i>
-          </div>
-          <div class="circle">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-        <img src="./media/thumbnail.png" class="cover-img" />
-        <h1>Babalik Sa'Yo</h1>
-        <p>Moira Dela Torre</p>
+<body>
+  <div class="container">
+    <div class="mplayer">
+      <nav>
+        <div class="circle">
+          <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="circle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <img src="./media/thumbnail.png" class="cover-img" />
+      <h1>Babalik Sa'Yo</h1>
+      <p>Moira Dela Torre</p>
 
-        <audio id="song">
-          <source
-            src="./songs/moira_dela_torre_babalik_sayo.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
+      <audio id="song">
+        <source
+          src="./songs/moira_dela_torre_babalik_sayo.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
 
-        <input type="range" value="0" id="progress" />
+      <input type="range" value="0" max="100" id="progress" />
 
-        <div class="controls">
-          <div>
-            <i class="fa-solid fa-backward"></i>
-          </div>
-          <div onclick="playPause()">
-            <i class="fa-solid fa-play" id="control_icon"></i>
-          </div>
-          <div>
-            <i class="fa-solid fa-forward"></i>
-          </div>
+      <div class="time-display">
+        <span id="current-time">0:00 sec</span> / <span id="total-time">0:00 sec</span>
+      </div>
+
+      <div class="controls">
+        <div onclick="playPrevious()">
+          <i class="fa-solid fa-backward"></i>
+        </div>
+        <div onclick="playPause()">
+          <i class="control-icon fas fa-play"></i>
+        </div>
+        <div onclick="playNext()">
+          <i class="fa-solid fa-forward"></i>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="./script.js"></script>
-  </body>
+  <script src="./script.js"></script>
+</body>
 </html>
