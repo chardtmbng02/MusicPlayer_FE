@@ -10,15 +10,27 @@ const previousButton = document.querySelector(".previous-button");
 
 const songs = [
   {
-    title: "Babalik Sa'Yo",
-    artist: "Moira Dela Torre",
-    source: "./songs/moira_dela_torre_babalik_sayo.mp3",
+    title: "Bawat Piyesa - Munimuni",
+    artist: "Track 01",
+    source: "./songs/01_Munimuni_Bawat_Piyesa.mp3",
     cover: "./media/thumbnail.png",
   },
   {
-    title: "A Million Dreams",
-    artist: "The Greatest Showman",
-    source: "./songs/a_million_dreams.mp3",
+    title: "Talinghaga - Munimuni",
+    artist: "Track 02",
+    source: "./songs/02_Talinghaga_Munimuni.mp3",
+    cover: "./media/thumbnail.png",
+  },
+  {
+    title: "Eba - Kiyo",
+    artist: "Track 03",
+    source: "./songs/03_Kiyo_Eba.mp3",
+    cover: "./media/thumbnail.png",
+  },
+  {
+    title: "Paraluman - Adie",
+    artist: "Track 04",
+    source: "./songs/04_Paraluman_Adie.mp3",
     cover: "./media/thumbnail.png",
   },
 ];
