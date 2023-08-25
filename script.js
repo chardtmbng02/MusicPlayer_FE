@@ -101,3 +101,7 @@ progress.oninput = function () {
   const seekTime = (audio.duration * progress.value) / 100;
   audio.currentTime = seekTime;
 };
+
+audio.addEventListener("ended", () => {
+  playNext();
+});
