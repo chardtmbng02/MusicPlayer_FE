@@ -55,7 +55,7 @@ const songs = [
   {
     title: "Sana",
     artist: "Track 08 - I Belong To The Zoo",
-    source: "./songs/08_I_Belong_To_The_Zoo_Sana.mp3",
+    source: "./songs/08_I_Belong_to_the_Zoo_Sana.mp3",
     cover: "./media/thumbnail.png",
   },
   {
