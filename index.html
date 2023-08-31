@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Player | Richard T</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player | Richard T</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
 <body>
   <div class="container">
     <div class="mplayer">
@@ -26,13 +24,10 @@
       </nav>
       <img src="./media/thumbnail.png" class="cover-img" />
       <h1>Bawat Piyesa</h1>
-      <p>Track 01</p>
+      <p>Track 01 - Munimuni</p>
 
       <audio id="song">
-        <source
-          src="./songs/01_Munimuni_Bawat_Piyesa.mp3"
-          type="audio/mpeg"
-        />
+        <source src="./songs/01_Munimuni_Bawat_Piyesa.mp3" type="audio/mpeg" />
       </audio>
 
       <input type="range" value="0" max="100" id="progress" />
@@ -57,4 +52,5 @@
 
   <script src="./script.js"></script>
 </body>
+
 </html>
